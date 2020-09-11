@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(S20-PA01-SentimentAnalysis)
-set (EXE_NAME SentimentAnalyzer)
+##set (EXE_NAME SentimentAnalyzer)
 
 ##########################################
 # Students, edit the items below.  In the quotes,
@@ -25,5 +25,6 @@ foreach(file IN LISTS input01 input02 input03 input04)
 endforeach()
 
 set(CMAKE_CXX_STANDARD 17)
-add_executable(${EXE_NAME} main.cpp)
+add_executable(SentimentAnalyzer main.cpp operations.cpp MyString.cpp MyString.h operations.h)
+add_executable(TEST test.cpp test.cpp MyString.cpp MyString.h)
 
